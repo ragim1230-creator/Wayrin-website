@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09080d">
+  <meta name="description" content="Wayrin — дизайн, который помогает брендам выглядеть сильнее. Айдентика, веб-дизайн и визуальные решения.">
+  <title>Wayrin — Design studio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+    :root{color-scheme:dark;--bg:#09080d;--panel:#121019;--muted:#aaa5b8;--white:#f7f4ff;--purple:#9c67ff;--line:rgba(255,255,255,.11)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 75% 5%,rgba(112,54,196,.19),transparent 32%),var(--bg);color:var(--white);font-family:Manrope,system-ui,sans-serif;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{font-size:25px;font-weight:800;letter-spacing:-1.6px}.brand span{color:var(--purple)}.navlinks{display:flex;gap:30px;color:#c5bfd0;font-size:13px}.navlinks a:hover{color:white}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(181,139,255,.45);border-radius:999px;padding:13px 20px;background:linear-gradient(135deg,rgba(150,93,255,.26),rgba(255,255,255,.06));color:white;font-size:13px;font-weight:700;transition:.2s}.nav-cta:hover,.btn:hover{transform:translateY(-2px);border-color:#b994ff;box-shadow:0 10px 35px #8e4dff25}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px;padding:80px 0 100px}.eyebrow{color:#c5a6ff;text-transform:uppercase;letter-spacing:3px;font-size:10px;font-weight:800}.hero h1{font-size:clamp(52px,7.7vw,100px);line-height:.98;letter-spacing:-7px;margin:22px 0 26px;font-weight:700}.hero h1 em{font-style:normal;color:#b58aff}.lead{color:#b8b2c3;max-width:510px;line-height:1.8;font-size:15px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:34px}.btn.primary{background:linear-gradient(120deg,#a46aff,#7041c9);border:0}.btn.secondary{background:rgba(255,255,255,.04);border-color:var(--line)}
+    .orb-wrap{height:440px;display:grid;place-items:center;position:relative}.orb{width:min(350px,75vw);aspect-ratio:1;border-radius:50%;position:relative;background:radial-gradient(circle at 32% 27%,#f2dfff 0 2%,#bd8aff 5%,#6c35b7 23%,#211334 53%,#09080d 72%);box-shadow:inset -35px -30px 65px #050309, inset 16px 13px 35px #e3baff55,0 0 100px #8b43e655;animation:float 7s ease-in-out infinite}.orb:before{content:"";position:absolute;inset:8%;border-radius:50%;border:1px solid #e6caff50;box-shadow:inset 0 0 40px #d8a9ff30}.orb:after{content:"WAYRIN";position:absolute;inset:0;display:grid;place-items:center;font-size:34px;font-weight:800;letter-spacing:5px;color:#f7eaff;text-shadow:0 3px 30px #fff8}.orbit{position:absolute;width:430px;height:140px;border:1px solid #c69bff70;border-radius:50%;transform:rotate(-24deg);box-shadow:0 0 25px #a76cff22}.orbit.two{width:460px;height:180px;transform:rotate(34deg);border-color:#ffffff30}@keyframes float{50%{transform:translateY(-15px) rotate(4deg)}}
+    section{padding:95px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}.section-head h2{font-size:clamp(34px,5vw,55px);letter-spacing:-3px;margin:12px 0 0}.section-head p{color:var(--muted);max-width:360px;font-size:13px;line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.service,.project,.contact-card{background:linear-gradient(145deg,#171320,#0f0d14);border:1px solid var(--line);border-radius:22px;overflow:hidden}.service{padding:26px;min-height:210px}.num{color:#a879ff;font-size:12px}.service h3{font-size:19px;margin:32px 0 10px}.service p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}
+    .project-art{height:220px;display:grid;place-items:center;position:relative;overflow:hidden}.project-art:before{content:"";position:absolute;width:210px;height:210px;border-radius:50%;filter:blur(1px);background:radial-gradient(circle at 35% 30%,#f2d8ff,#a66aff 20%,#40206e 62%,transparent 70%);opacity:.8}.project:nth-child(2) .project-art:before{background:linear-gradient(135deg,#e8e2d6,#b2a18d 40%,#29232b);border-radius:18px;transform:rotate(-12deg)}.project:nth-child(3) .project-art:before{background:repeating-linear-gradient(45deg,#a783ff 0 3px,#24163b 3px 12px);border-radius:50%;width:240px;height:240px}.project:nth-child(4) .project-art:before{background:linear-gradient(135deg,#ffb36d,#a33b58,#25112f);border-radius:10px;transform:rotate(18deg)}.project:nth-child(5) .project-art:before{background:radial-gradient(circle,#e6f5ff,#6d9cba 25%,#172d49 70%)}.project:nth-child(6) .project-art:before{background:linear-gradient(135deg,#c5c5c5,#444,#111);border-radius:8px;transform:rotate(-18deg)}.art-label{position:relative;z-index:1;font-size:25px;font-weight:800;letter-spacing:-1px;text-shadow:0 3px 20px #000}.project-info{padding:18px 20px 21px}.project-info h3{margin:0 0 5px;font-size:15px}.project-info p{margin:0;color:var(--muted);font-size:12px}
+    .portfolio-note{color:#898294;font-size:11px;margin-top:15px;line-height:1.6}.contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}.contact-copy h2{font-size:clamp(38px,5vw,58px);line-height:1.03;letter-spacing:-3px;margin:15px 0}.contact-copy p{color:var(--muted);font-size:14px;line-height:1.8}.contact-card{padding:26px}.form{display:grid;gap:14px}.form label{font-size:11px;color:#c8c1d2}.form input,.form select,.form textarea{width:100%;margin-top:7px;border:1px solid var(--line);background:#0b0910;color:white;border-radius:12px;padding:14px;outline:none}.form input:focus,.form textarea:focus,.form select:focus{border-color:#9e6aff}.form textarea{min-height:105px;resize:vertical}.form .btn{width:100%;cursor:pointer}.hint{font-size:10px;color:#8f899a;line-height:1.6}.footer{border-top:1px solid var(--line);padding:28px 0;color:#8f899a;font-size:11px;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:760px){.wrap{width:min(100% - 32px,560px)}.nav{height:70px}.navlinks{display:none}.nav-cta{padding:10px 14px;font-size:11px}.hero{grid-template-columns:1fr;padding:70px 0 55px;gap:0;min-height:auto}.hero h1{letter-spacing:-4px}.orb-wrap{height:330px;margin-top:10px}.orb{width:250px}.orbit{width:320px;height:110px}.orbit.two{width:340px;height:140px}.section-head{display:block}.section-head p{margin-top:15px}.grid{grid-template-columns:1fr 1fr}.project-art{height:160px}.contact{grid-template-columns:1fr;gap:25px}section{padding:70px 0}.footer{flex-direction:column}.service{padding:19px;min-height:190px}.service h3{margin-top:24px;font-size:16px}}
+    @media(max-width:430px){.grid{grid-template-columns:1fr}.project-art{height:190px}.hero h1{font-size:54px}.orb-wrap{height:300px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#">wayrin<span>.</span></a>
+    <nav class="navlinks"><a href="#services">Услуги</a><a href="#work">Работы</a><a href="#contact">Контакты</a></nav>
+    <a class="nav-cta" href="#contact">Обсудить проект ↗</a>
+  </header>
+  <main>
+    <section class="wrap hero">
+      <div>
+        <div class="eyebrow">Independent design studio</div>
+        <h1>Идеи, которым<br>нужна <em>форма.</em></h1>
+        <p class="lead">Создаём визуальные решения для брендов и проектов, которые хотят выделяться. От первого наброска до цельного цифрового образа.</p>
+        <div class="actions"><a class="btn primary" href="#contact">Начать проект ↗</a><a class="btn secondary" href="#work">Смотреть работы ↓</a></div>
+      </div>
+      <div class="orb-wrap" aria-label="Wayrin abstract purple planet"><div class="orbit"></div><div class="orbit two"></div><div class="orb"></div></div>
+    </section>
+    <section id="services" class="wrap">
+      <div class="section-head"><div><div class="eyebrow">What we do</div><h2>Дизайн со смыслом.</h2></div><p>Не просто красивая картинка. Мы продумываем, как визуальный стиль помогает проекту говорить с людьми.</p></div>
+      <div class="grid">
+        <article class="service"><div class="num">01 / BRAND</div><h3>Айдентика</h3><p>Логотипы, фирменный стиль и визуальная система бренда.</p></article>
+        <article class="service"><div class="num">02 / DIGITAL</div><h3>Веб-дизайн</h3><p>Современные сайты и интерфейсы с вниманием к деталям.</p></article>
+        <article class="service"><div class="num">03 / VISUAL</div><h3>Графический дизайн</h3><p>Постеры, обложки, рекламные материалы и digital-графика.</p></article>
+      </div>
+    </section>
+    <section id="work" class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Selected concepts</div><h2>Визуальная лаборатория.</h2></div><p>Подборка визуальных направлений и концепций студии.</p></div>
+      <div class="grid">
+        <article class="project"><div class="project-art"><span class="art-label">SHADOW</span></div><div class="project-info"><h3>Shadow King</h3><p>Visual identity · Concept</p></div></article>
+        <article class="project"><div class="project-art"><span class="art-label">FORM / 02</span></div><div class="project-info"><h3>Sales Production</h3><p>Art direction · Concept</p></div></article>
+        <article class="project"><div class="project-art"><span class="art-label">DUALITY</span></div><div class="project-info"><h3>Duality</h3><p>Poster design · Concept</p></div></article>
+        <article class="project"><div class="project-art"><span class="art-label">LUFT</span></div><div class="project-info"><h3>Luft Bio</h3><p>Branding · Concept</p></div></article>
+        <article class="project"><div class="project-art"><span class="art-label">VISUAL 05</span></div><div class="project-info"><h3>Visual Selection</h3><p>Graphic design · Concept</p></div></article>
+        <article class="project"><div class="project-art"><span class="art-label">UNKNOWN</span></div><div class="project-info"><h3>Death Stranding</h3><p>Key visual · Fan concept</p></div></article>
+      </div>
+      <p class="portfolio-note">Это временные визуальные заглушки для запуска сайта. Их нужно заменить реальными изображениями работ перед полноценной презентацией портфолио.</p>
+    </section>
+    <section id="contact" class="wrap">
+      <div class="contact">
+        <div class="contact-copy"><div class="eyebrow">Let's talk</div><h2>Есть идея?<br><em style="color:#b58aff;font-style:normal">Давай создадим.</em></h2><p>Расскажи немного о задаче. Заявка откроется в Telegram — проверь сообщение и нажми «Отправить».</p><p>Telegram: <a href="https://t.me/wayrin" style="color:#c6a4ff">@wayrin ↗</a></p></div>
+        <div class="contact-card">
+          <form class="form" id="orderForm">
+            <label>Как к тебе обращаться<input name="name" placeholder="Твоё имя" required maxlength="80"></label>
+            <label>Что нужно сделать<select name="service" required><option value="">Выбери услугу</option><option>Айдентика / логотип</option><option>Веб-дизайн</option><option>Графический дизайн</option><option>Другое</option></select></label>
+            <label>Расскажи о проекте<textarea name="details" placeholder="Коротко опиши свою идею..." required maxlength="1200"></textarea></label>
+            <button class="btn primary" type="submit">Отправить заявку в Telegram ↗</button>
+            <div class="hint">Сайт не отправляет данные автоматически и не хранит их. Он подготовит сообщение в Telegram, а отправишь его ты сам.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year"></span> Wayrin Design Studio</span><span>Made with intention. <a href="https://t.me/wayrin">@wayrin</a></span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('orderForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const data = new FormData(this);
+      const message = [
+        'Новая заявка на Wayrin',
+        '',
+        'Имя: ' + data.get('name'),
+        'Услуга: ' + data.get('service'),
+        'Проект: ' + data.get('details')
+      ].join('\n');
+      window.open('https://t.me/wayrin?text=' + encodeURIComponent(message), '_blank', 'noopener');
+    });
+  </script>
+</body>
+</html>
