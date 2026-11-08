@@ -96,6 +96,14 @@ body{background:#030303}
 @media(max-width:900px){.hero-visual{right:-18%;width:88%;opacity:.8}.service-grid{grid-template-columns:repeat(3,1fr)}.work-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.hero{padding-top:60px;min-height:610px}.hero-copy{padding-top:0}.hero-visual{width:125%;right:-36%;top:80px;height:440px;opacity:.62}.hero h1:before{font-size:clamp(68px,17vw,100px)}.hero h1 span{font-size:clamp(68px,17vw,100px)}.nav{border:0;border-radius:0}.service-grid{grid-template-columns:1fr}.service-card{min-height:280px}.work-grid{grid-template-columns:repeat(2,1fr)}.work-card,.work-card:nth-child(n){min-height:230px}.contact-layout{padding:22px;grid-template-columns:1fr}.topbar .nav a:first-child{background:transparent}}
 @media(prefers-reduced-motion:reduce){.octopus-frame{animation:none}}
+</style><style>
+.service-card p{font-size:12px;line-height:2.65;color:#a5a2a5;min-height:100px;padding-left:28px;position:relative}
+.service-card p:before{content:"✓";position:absolute;left:0;color:#fff;background:#ffffff17;border:1px solid #ffffff12;width:20px;height:20px;line-height:18px;text-align:center;border-radius:50%;font-size:11px}
+.service-price{display:none}
+.service-bottom a{display:flex;align-items:center;justify-content:center;flex:1;height:43px;border:1px solid #ffffff28;border-radius:30px;color:white;font:600 12px var(--body);transition:.25s}
+.service-card:nth-child(2) .service-bottom a{background:linear-gradient(110deg,#f2293d,#b90d20);border-color:#f64c5b;box-shadow:0 5px 22px #ed172e45}
+.service-bottom a:hover{background:#ed1d31;border-color:#ff6673}
+@media(max-width:680px){.service-card p{min-height:90px}}
 </style></head>
 <body>
 <header class="topbar">
@@ -119,9 +127,9 @@ body{background:#030303}
 <section class="section" id="services"><div class="wrap">
 <div class="section-head reveal"><div><div class="eyebrow">01 / What we do</div><h2 class="section-title">Choose your<br><em>level.</em></h2></div><p class="section-desc">Выбери формат сотрудничества — и давай создавать что-то заметное.</p></div>
 <div class="service-grid">
-<article class="service-card reveal"><div class="service-top"><span>Free Plan</span><span>↗</span></div><h3>Free</h3><p>Логотипы, айдентика и визуальные системы, которые создают узнаваемость.</p><div class="service-bottom"><span class="service-price">Free</span><a href="#contact" aria-label="Заказать брендинг">↗</a></div></article>
-<article class="service-card reveal"><div class="service-top"><span>Standard Plan</span><span>↗</span></div><h3>Standard</h3><p>Обложки, баннеры, оформление соцсетей и графика с точным характером.</p><div class="service-bottom"><span class="service-price">$49 <small>/ m</small></span><a href="#contact" aria-label="Заказать digital-дизайн">↗</a></div></article>
-<article class="service-card reveal"><div class="service-top"><span>Pro Plan</span><span>↗</span></div><h3>Pro</h3><p>Лендинги и сайты, где эстетика соединяется с удобством и результатом.</p><div class="service-bottom"><span class="service-price">$99 <small>/ m</small></span><a href="#contact" aria-label="Заказать сайт">↗</a></div></article>
+<article class="service-card reveal"><div class="service-top"><span>Free Plan</span><span>↗</span></div><h3>Free</h3><p>Basic design support<br>1 project<br>Email support</p><div class="service-bottom"><span class="service-price">Free</span><a href="#contact" aria-label="Заказать брендинг">Get Started</a></div></article>
+<article class="service-card reveal"><div class="service-top"><span>Standard Plan</span><span>↗</span></div><h3>Standard</h3><p>Advanced design<br>Priority support<br>Unlimited revisions</p><div class="service-bottom"><span class="service-price">$49 <small>/ m</small></span><a href="#contact" aria-label="Заказать digital-дизайн">Get Started</a></div></article>
+<article class="service-card reveal"><div class="service-top"><span>Pro Plan</span><span>↗</span></div><h3>Pro</h3><p>Full development<br>Dedicated manager<br>24/7 support</p><div class="service-bottom"><span class="service-price">$99 <small>/ m</small></span><a href="#contact" aria-label="Заказать сайт">Get Started</a></div></article>
 </div>
 </div></section>
 <section class="section" id="work"><div class="wrap">
