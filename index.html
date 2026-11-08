@@ -31,36 +31,101 @@
 @media(max-width:680px){.wrap{width:calc(100% - 34px)}.topbar{height:70px;padding:0 17px}.brand{font-size:19px}.brand img{width:31px;height:24px}.nav{display:none;position:absolute;top:69px;left:0;right:0;padding:18px;background:#0d0e11f5;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:12px 5px;border-bottom:1px solid #ffffff0d}.top-cta{margin-left:auto;margin-right:12px;padding:10px 13px;font-size:10px}.menu-toggle{display:block}.hero{grid-template-columns:1fr;min-height:0;padding:72px 0 70px}.hero h1{font-size:clamp(80px,19vw,120px)}.hero-visual{min-height:310px;margin-top:-8px}.octopus-frame{width:100%;max-width:430px}.visual-halo{width:90%}.orbit{width:85%}.visual-note{right:3%;bottom:5%}.hero-foot{margin-top:48px;gap:14px;flex-wrap:wrap;font-size:8px}.scroll-cue{display:none}.section{padding:75px 0}.section-head{display:block;margin-bottom:30px}.section-desc{margin-top:17px}.service-grid{grid-template-columns:1fr}.service-card{min-height:245px}.work-grid{grid-template-columns:1fr}.work-card,.work-card:nth-child(n){min-height:260px}.about{grid-template-columns:1fr;gap:28px}.planet-stage{height:330px}.contact-layout{grid-template-columns:1fr;gap:30px}.order-form{padding:22px}.field-row{grid-template-columns:1fr}.footer{flex-wrap:wrap}.footer-links{order:3;width:100%;justify-content:space-between;gap:10px}.footer>span{font-size:8px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
 </style>
-</head>
+<style>
+/* WAYRIN RED CINEMATIC ART DIRECTION */
+:root{--bg:#030303;--panel:#0b0b0d;--ink:#f5f3f3;--muted:#a3a0a2;--red:#ed1d31;--red2:#8e0718;--line:#ffffff20}
+body{background:#030303}
+.topbar{height:76px;background:#030303c9;border-bottom-color:#ffffff12}
+.brand{font:600 21px var(--body);letter-spacing:-.8px}.brand img{width:38px;height:34px}
+.top-cta,.btn-primary{background:linear-gradient(110deg,#f2293d,#a90b1d);color:#fff;border:1px solid #ff6874aa;box-shadow:0 0 28px #ef172b44,inset 0 1px #ffffff40;border-radius:30px}
+.nav{padding:7px 10px;border:1px solid #ffffff20;border-radius:30px;background:#090909aa;gap:4px}
+.nav a{padding:9px 16px;border-radius:22px}.nav a:first-child,.nav a:hover{background:#d91a2c;color:#fff}
+.hero{min-height:650px;grid-template-columns:1fr;display:block;padding-top:75px;padding-bottom:65px}
+.hero-copy{max-width:520px;padding-top:18px}
+.hero-kicker{display:inline-flex;border:1px solid #ffffff22;background:#ffffff0b;padding:9px 15px;border-radius:30px;margin-bottom:28px}
+.status-dot{background:var(--red);box-shadow:0 0 14px var(--red)}
+.hero h1{font:800 clamp(76px,10vw,132px)/.78 var(--display);letter-spacing:-.09em;margin-bottom:28px;text-shadow:0 6px 32px #000}
+.hero h1:before{content:"Wayrin";display:block;color:#f4f2f2}
+.hero h1{font-size:0}
+.hero h1 span{font-size:clamp(76px,10vw,132px);padding:0;color:#ed2438;text-shadow:0 0 38px #ed243855}
+.hero-lead{font-size:17px;line-height:1.45;max-width:340px;color:#c2bec0}
+.hero-actions{margin-top:28px}
+.btn{border-radius:30px;padding:14px 22px}
+.btn-glass{border-radius:50%;width:48px;height:48px;padding:0}
+.hero-foot,.scroll-cue{display:none}
+.hero-visual{position:absolute;z-index:-1;right:-9%;top:0;width:75%;height:100%;min-height:0;pointer-events:none}
+.visual-halo{width:100%;height:100%;border-radius:0;background:radial-gradient(ellipse at 58% 42%,#5e0614a6,transparent 66%);filter:blur(20px)}
+.octopus-frame{width:100%;height:100%;max-width:none;aspect-ratio:auto;right:0;top:0;transform:none;animation:heroDrift 12s ease-in-out infinite;filter:drop-shadow(0 24px 60px #a90020)}
+.octopus-frame img{width:100%;height:100%;object-fit:cover;object-position:center;mix-blend-mode:screen;opacity:.8;filter:saturate(1.3) contrast(1.08)}
+.orbit,.visual-note{display:none}
+@keyframes heroDrift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-1.5%,1%,0) scale(1.035)}}
+.section{border-top:0;padding:70px 0}
+#services{padding-top:10px}
+.section-head{margin-bottom:28px}
+.section-title{font-size:clamp(36px,5vw,58px)}
+.service-grid{grid-template-columns:repeat(3,1fr);gap:18px}
+.service-card{min-height:310px;padding:28px 30px 24px;border-radius:22px;background:linear-gradient(145deg,#1b1b1e,#09090a 65%);border:1px solid #ffffff26;box-shadow:inset 0 1px #ffffff18,0 20px 50px #0008;backdrop-filter:blur(20px)}
+.service-card:before{width:230px;height:230px;right:-100px;top:-120px;background:#ec1d321f;filter:blur(40px)}
+.service-top{font:12px var(--body);letter-spacing:0;text-transform:none;color:#aaa}
+.service-card h3{font:700 36px var(--display);margin:28px 0 15px;letter-spacing:-1.5px}
+.service-card p{font-size:12px;min-height:45px}
+.service-bottom{left:30px;right:30px;bottom:25px;border-top:1px solid #ffffff18}
+.service-price{font:700 27px var(--display)}.service-price small{font:12px var(--body);color:#aaa}
+.service-bottom a{display:none}
+.service-card:nth-child(2){border-color:#e52b3d88;box-shadow:0 0 35px #e31c2a22,inset 0 1px #ffffff20}
+.service-card:nth-child(2):after{content:"POPULAR";position:absolute;right:22px;top:-1px;background:#e51d31;color:white;font:700 10px var(--mono);padding:8px 16px;border-radius:0 0 12px 12px;letter-spacing:.1em}
+.work-grid{grid-template-columns:repeat(4,1fr);gap:14px}
+.work-card,.work-card:nth-child(n){min-height:300px;border-radius:17px;background:#0a0a0b}
+.work-card:before{opacity:0}
+.work-art{background-size:cover;background-position:center;transition:transform .7s}
+.work-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#050506e8 0%,#08080822 70%,#08080820)}
+.work-card:nth-child(1) .work-art{background-image:url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?auto=format&fit=crop&w=900&q=85')}
+.work-card:nth-child(2) .work-art{background-image:url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=85')}
+.work-card:nth-child(3) .work-art{background-image:url('https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=85')}
+.work-card:nth-child(4) .work-art{background-image:url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85')}
+.work-art .big-word,.work-art .shape{display:none}
+.work-card:hover .work-art{transform:scale(1.06)}
+.work-info{left:17px;right:17px;bottom:18px}
+.work-info h3{font-size:15px}.work-info p{font:11px var(--body);text-transform:none;letter-spacing:0;color:#c2bfc0}
+.work-index{display:none}
+.work-foot{margin-top:20px}
+.contact-section{padding:70px 0 90px;background:radial-gradient(ellipse at 0 100%,#9f1c2b1a,transparent 50%),#030303}
+.contact-layout{padding:42px;border:1px solid #ffffff24;border-radius:26px;background:linear-gradient(125deg,#121214,#070708 65%);box-shadow:inset 0 1px #ffffff18,0 30px 90px #000}
+.contact-links{display:none}
+.order-form{border-radius:20px;background:#ffffff08}
+@media(max-width:900px){.hero-visual{right:-18%;width:88%;opacity:.8}.service-grid{grid-template-columns:repeat(3,1fr)}.work-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.hero{padding-top:60px;min-height:610px}.hero-copy{padding-top:0}.hero-visual{width:125%;right:-36%;top:80px;height:440px;opacity:.62}.hero h1:before{font-size:clamp(68px,17vw,100px)}.hero h1 span{font-size:clamp(68px,17vw,100px)}.nav{border:0;border-radius:0}.service-grid{grid-template-columns:1fr}.service-card{min-height:280px}.work-grid{grid-template-columns:repeat(2,1fr)}.work-card,.work-card:nth-child(n){min-height:230px}.contact-layout{padding:22px;grid-template-columns:1fr}.topbar .nav a:first-child{background:transparent}}
+@media(prefers-reduced-motion:reduce){.octopus-frame{animation:none}}
+</style></head>
 <body>
 <header class="topbar">
 <a class="brand" href="#top" aria-label="Wayrin — на главную"><img src="assets/wayrin-mark.svg" alt=""><span>WAYRIN<sup>®</sup></span></a>
 <nav class="nav" id="mainNav" aria-label="Главная навигация"><a href="#services">Услуги</a><a href="#work">Проекты</a><a href="#about">Студия</a><a href="#contact">Контакты</a></nav>
-<a class="top-cta" href="#contact">Обсудить проект <span class="arrow">↗</span></a>
+<a class="top-cta" href="#contact">Start a Project <span class="arrow">↗</span></a>
 <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
 </header>
 <main id="top">
 <section class="wrap hero">
 <div class="hero-copy">
-<div class="hero-kicker eyebrow"><span class="status-dot"></span> Independent creative studio · 2026</div>
-<h1>Make it<br><span>matter.</span></h1>
-<p class="hero-lead">Мы превращаем идеи в <strong>визуальные системы</strong>, цифровые продукты и бренды, которые невозможно спутать с другими.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="#contact">Обсудить проект <span class="arrow">↗</span></a><a class="btn btn-glass" href="#work">Исследовать работы <span class="arrow">↓</span></a></div>
+<div class="hero-kicker eyebrow"><span class="status-dot"></span> Design Studio</div>
+<h1><span>Design</span></h1>
+<p class="hero-lead">Premium design, development and digital solutions.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="#contact">Обсудить проект <span class="arrow">↗</span></a><a class="btn btn-glass" href="#work">Watch Reel <span class="arrow">▶</span></a></div>
 <div class="hero-foot"><span>Brand identity</span><span>Digital design</span><span>Web experience</span></div>
 </div>
 <div class="hero-visual" aria-label="Фирменный осьминог Wayrin"><div class="visual-halo"></div><div class="orbit"></div><div class="octopus-frame"><img src="assets/hero-octopus.svg" alt="Осьминог — визуальный символ Wayrin"></div><div class="visual-note">Curiosity is our engine · W/01</div></div>
 <div class="scroll-cue">Scroll to explore</div>
 </section>
 <section class="section" id="services"><div class="wrap">
-<div class="section-head reveal"><div><div class="eyebrow">01 / What we do</div><h2 class="section-title">Дизайн, который<br><em>работает.</em></h2></div><p class="section-desc">От первого визуального импульса до готового цифрового продукта. Выбираем не шаблон, а решение под задачу.</p></div>
+<div class="section-head reveal"><div><div class="eyebrow">01 / What we do</div><h2 class="section-title">Choose your<br><em>level.</em></h2></div><p class="section-desc">Выбери формат сотрудничества — и давай создавать что-то заметное.</p></div>
 <div class="service-grid">
-<article class="service-card reveal"><div class="service-top"><span>01 — IDENTITY</span><span>↗</span></div><h3>Brand identity</h3><p>Логотипы, айдентика и визуальные системы, которые создают узнаваемость.</p><div class="service-bottom"><span class="service-price">от $49 <small>/ project</small></span><a href="#contact" aria-label="Заказать брендинг">↗</a></div></article>
-<article class="service-card reveal"><div class="service-top"><span>02 — DIGITAL</span><span>↗</span></div><h3>Digital design</h3><p>Обложки, баннеры, оформление соцсетей и графика с точным характером.</p><div class="service-bottom"><span class="service-price">от $19 <small>/ project</small></span><a href="#contact" aria-label="Заказать digital-дизайн">↗</a></div></article>
-<article class="service-card reveal"><div class="service-top"><span>03 — WEB</span><span>↗</span></div><h3>Web experience</h3><p>Лендинги и сайты, где эстетика соединяется с удобством и результатом.</p><div class="service-bottom"><span class="service-price">от $99 <small>/ project</small></span><a href="#contact" aria-label="Заказать сайт">↗</a></div></article>
+<article class="service-card reveal"><div class="service-top"><span>Free Plan</span><span>↗</span></div><h3>Free</h3><p>Логотипы, айдентика и визуальные системы, которые создают узнаваемость.</p><div class="service-bottom"><span class="service-price">Free</span><a href="#contact" aria-label="Заказать брендинг">↗</a></div></article>
+<article class="service-card reveal"><div class="service-top"><span>Standard Plan</span><span>↗</span></div><h3>Standard</h3><p>Обложки, баннеры, оформление соцсетей и графика с точным характером.</p><div class="service-bottom"><span class="service-price">$49 <small>/ m</small></span><a href="#contact" aria-label="Заказать digital-дизайн">↗</a></div></article>
+<article class="service-card reveal"><div class="service-top"><span>Pro Plan</span><span>↗</span></div><h3>Pro</h3><p>Лендинги и сайты, где эстетика соединяется с удобством и результатом.</p><div class="service-bottom"><span class="service-price">$99 <small>/ m</small></span><a href="#contact" aria-label="Заказать сайт">↗</a></div></article>
 </div>
 </div></section>
 <section class="section" id="work"><div class="wrap">
-<div class="section-head reveal"><div><div class="eyebrow">02 / Selected work</div><h2 class="section-title">Less noise.<br><em>More impact.</em></h2></div><p class="section-desc">Концептуальные направления и визуальные эксперименты. Здесь важны идея, система и внимание к деталям.</p></div>
+<div class="section-head reveal"><div><div class="eyebrow">02 / Selected work</div><h2 class="section-title">Selected<br><em>Projects.</em></h2></div><p class="section-desc">Концептуальные направления и визуальные эксперименты. Здесь важны идея, система и внимание к деталям.</p></div>
 <div class="work-grid">
 <article class="work-card reveal"><div class="work-art"><span class="big-word">SHADOW</span><span class="shape"></span></div><div class="work-info"><div><h3>Shadow King</h3><p>Branding · Concept</p></div><span class="work-index">01 / 04</span></div></article>
 <article class="work-card reveal"><div class="work-art"><span class="big-word">SALES.</span><span class="shape"></span></div><div class="work-info"><div><h3>Sales Production</h3><p>Web design · Concept</p></div><span class="work-index">02 / 04</span></div></article>
@@ -70,12 +135,12 @@
 <div class="work-foot"><span>Selected concepts / 2026</span><a class="text-link" href="https://t.me/wayrin" target="_blank" rel="noopener">Запросить портфолио ↗</a></div>
 </div></section>
 <section class="section" id="about"><div class="wrap about">
-<div class="about-copy reveal"><div class="eyebrow">03 / The studio</div><h2 class="section-title">Не следуем<br>за шумом.<br><em>Создаём своё.</em></h2><p>Wayrin — независимая креативная студия на стыке дизайна, технологий и визуального сторителлинга. Мы верим, что сильная идея должна быть не только красивой, но и понятной, функциональной и запоминающейся.</p><div class="principles"><div class="principle"><b>01 / Смысл</b><span>Сначала идея. Потом форма.</span></div><div class="principle"><b>02 / Характер</b><span>Никаких решений под копирку.</span></div><div class="principle"><b>03 / Детали</b><span>Качество видно в мелочах.</span></div><div class="principle"><b>04 / Диалог</b><span>Работаем вместе с клиентом.</span></div></div></div>
+<div class="about-copy reveal"><div class="eyebrow">03 / The studio</div><h2 class="section-title">Turn your idea<br>into <em>reality.</em></h2><p>Wayrin — независимая креативная студия на стыке дизайна, технологий и визуального сторителлинга. Мы верим, что сильная идея должна быть не только красивой, но и понятной, функциональной и запоминающейся.</p><div class="principles"><div class="principle"><b>01 / Смысл</b><span>Сначала идея. Потом форма.</span></div><div class="principle"><b>02 / Характер</b><span>Никаких решений под копирку.</span></div><div class="principle"><b>03 / Детали</b><span>Качество видно в мелочах.</span></div><div class="principle"><b>04 / Диалог</b><span>Работаем вместе с клиентом.</span></div></div></div>
 <div class="planet-stage reveal"><div class="planet" id="planet" role="img" aria-label="Перетаскивай сферу, чтобы повернуть её"><div class="planet-face front"><img src="assets/wayrin-mark.svg" alt="Логотип Wayrin"></div><div class="planet-face back">Ну давай же<br>заказывай <span style="color:#ff6470">↗</span></div></div><div class="planet-caption"><span>Drag to rotate</span><span>There is more on the other side</span></div></div>
 </div></section>
 <section class="section contact-section" id="contact"><div class="wrap">
 <div class="contact-layout">
-<div class="contact-copy reveal"><div class="eyebrow">04 / Start something</div><h2 class="section-title">Есть идея?<br><em>Поговорим.</em></h2><p>Расскажи, что хочешь создать. Мы обсудим задачу, предложим направление и подберём формат работы.</p>
+<div class="contact-copy reveal"><div class="eyebrow">04 / Start something</div><h2 class="section-title">Let’s work<br><em>together.</em></h2><p>Get in touch with us and let’s create something extraordinary.</p>
 <div class="contact-links"><a class="contact-link" href="https://t.me/wayrin" target="_blank" rel="noopener"><span><small>TELEGRAM</small><b>@wayrin</b></span><i>↗</i></a><a class="contact-link" href="mailto:ragim1230@gmail.com"><span><small>EMAIL</small><b>ragim1230@gmail.com</b></span><i>↗</i></a></div></div>
 <form class="order-form reveal" id="orderForm"><div class="form-heading"><h3>Brief your project.</h3><span>LET'S BEGIN ↗</span></div>
 <div class="field-row"><div class="field"><label for="name">Как к вам обращаться?</label><input id="name" name="name" autocomplete="name" placeholder="Ваше имя" required></div><div class="field"><label for="service">Что нужно сделать?</label><select id="service" name="service" required><option value="">Выберите услугу</option><option>Логотип / айдентика</option><option>Обложка / баннер / графика</option><option>Оформление соцсетей</option><option>Дизайн сайта</option><option>Разработка сайта</option><option>Другое</option></select></div></div>
